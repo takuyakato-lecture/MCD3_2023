@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>マルチメディアコンテンツデザイン各論３：音声データの編集（1/4:導入）</title>
+        <link rel="stylesheet" href="MCD.css">
+        <!-- Webフォント用 -->
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400&family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+        <!-- favicon -->
+        <link rel="icon" type="image/png" href="favicon.png">
+    </head>
+    <body>
+      <span class="small"><div id="time">経過時間：0秒</div></span>
+
+        <header>
+          <h1>マルチメディアコンテンツデザイン各論３：音声データの編集（1/4:導入）</h1>
+          <p class="right">
+            講師：平井 辰典<br>
+            <progress value="0"></progress><br>
+            (0％ / 100％)
+          </p>
+        </header>
+
+        <section> <!-- 動画 -->
+          <h2>①導入</h2>
+
+          <!-- <p class="doc">
+            上記の動画を試聴するか，以下の項目を一つずつ読んで内容を理解してください．<br>
+            最後に練習問題に取り組んで次の内容に進みましょう．<br>
+            <span class="small">※　動画の内容と以下の項目は同じ内容です．</span>
+          </p> -->
+          <p class="doc">
+            以下の項目を一つずつ読んで内容を理解してください．<br>
+            最後に練習問題に取り組んで次の内容に進みましょう．
+          </p>
+        </section>
+
+        <nav>
+          <h2>本項目の目次</h2>
+          <ul>
+            <li><a href="#sec1">Audacityの導入</a>
+            <li><a href="#sec2">導入</a>
+            <li><a href="#sec3">演習①：音声の切り貼り</a>
+          </ul>
+          <ul>
+            <li><a href="#ex1">練習問題１</a>
+          </ul>
+        </nav>
+
+        <div class="anmt">
+          <section id="sec1"> <!-- sec1 -->
+            <div class="hidden_box">
+              <label for="label1">Audacityの導入<span class="small">（クリックして表示）</small></label>
+              <input type="checkbox" id="label1"/>
+              <div class="hidden_show">
+                <!--非表示ここから-->
+                  <div class="slide"><img src="slides/03-01.jpeg"></div>
+                  <div class="container">
+                    <div class="faceicon"><img src="icon.jpeg"></div>
+                    <div class="baloon">
+                      それでは，マルチメディアコンテンツデザイン各論の第三回講義を始めます．<br>
+                      講師はGMS学部，情報論分野の講師の平井です．<br>
+                      今日はオンラインのみでの回なので，必ずノートを取りましょう．<br>
+                      ファイル名は「MCD1_3_AudioEdit_GK????_hirai.docx」などがいいかと思います．<br><br>
+
+                      オンラインのみの回では，この講義資料を読み進めながら，必要に応じて重要な内容をノートにまとめていくという形式で学習していただきます．<br>
+                      最後まで進めると，出席登録に必要なコードが表示されるようになっています．<br>
+                      今回は主に演習形式となっているので，ノートを取りつつ作業も行えるようにしておいてください．
+                    </div>
+                  </div>
+                  <p class="doc">
+                    ↑の吹き出しをクリックすると，音声が読み上げられます．（環境依存あり）
+                  </p>
+
+                  <div class="slide"><img src="slides/03-02.jpeg"></div>
+                  <div class="container">
+                    <div class="faceicon"><img src="icon.jpeg"></div>
+                    <div class="baloon">
+                      講義スケジュールです．<br><br>
+
+                      今日は第３回の「音声データの編集」の内容です．
+                    </div>
+                  </div>
+
+                  <div class="slide"><img src="slides/03-03.jpeg"></div>
+                  <div class="container">
+                    <div class="faceicon"><img src="icon.jpeg"></div>
+                    <div class="baloon">
+                      では早速，音声データの編集について学んでいきましょう．<br>
+                      本日は演習がメインの内容となっており，音声波形編集ソフトのAudacityを利用します．<br>
+                      この資料自体はスマホで閲覧しても大丈夫ですが，演習にはPCで取り組めるように準備をしてください．
+                    </div>
+                  </div>
+
+                  <br><br>
+                    <div class="container">
+                      <div class="faceicon"><img src="icon.jpeg"></div>
+                      <div class="baloon">
+                        まずは以下の資料を参照しながら，音声編集ソフト「Audacity」を自身のPCにインストールしてください．
+                      </div>
+                    </div>
+                    <br><br>
+
+                    <div class="doc">
+                      <a href="./Audacityのインストール方法.pdf" target="_blank">
+                        Audacityのインストールマニュアル（PDFファイル）
+                      </a>
+                      <br><br>
+                      Audacityの公式サイトは<a href="https://www.audacityteam.org/" target="_blank">こちら．</a>
+                    </div>
+                    <br>
+                      <div class="container">
+                        <div class="faceicon"><img src="icon.jpeg"></div>
+                        <div class="baloon">
+                          インストールが完了したら先に進みましょう．
+                        </div>
+                      </div>
+                    <br><br>
+
+                  <div class="slide"><img src="slides/03-04.jpeg"></div>
+                  <div class="container">
+                    <div class="faceicon"><img src="icon.jpeg"></div>
+                    <div class="baloon">
+                      本日は音声波形編集ソフトであるAudacityを使用して音声データを加工，編集していただきます．<br><br>
+                      <!-- <b>[インストールが済んでいない人向け]</b><br>
+                      まだAudacityのインストールが済んでいない場合は，前回の講義資料の中にマニュアルがありますので，そちらを参照してインストールを完了させてください．<br>
+                      今回事前にインストールできていなかった人は，次回以降は必ずソフトの事前インストールをしておくようにしてください．<br>
+                      環境が原因で講義の本質に集中できないのはもったいないことです．<br>
+                      次回以降，Studio One Primeというソフトをインストールしていただく機会がありますので，その際は余裕を持って準備をするようにお願いします． -->
+                    </div>
+                  </div>
+
+                  <div class="slide"><img src="slides/03-05.jpeg"></div>
+                  <div class="container">
+                    <div class="faceicon"><img src="icon.jpeg"></div>
+                    <div class="baloon">
+                      音声波形編集ソフトについての説明です．<br>
+                      前回，音声は波であることやそのデジタル表現の方法について学びました．<br>
+                      音声波形編集ソフトは，wavやmp3などといった形式のデジタルオーディオデータを入力すると，その波の波形を表示してくれるソフトです．<br>
+                      表示だけでなく，加工・編集・合成など多様な処理ができます．<br>
+                      無料のものから有料のものまで多様なソフトが存在します．
+                    </div>
+                  </div>
+
+                  <div class="slide"><img src="slides/03-06.jpeg"></div>
+                  <div class="container">
+                    <div class="faceicon"><img src="icon.jpeg"></div>
+                    <div class="baloon">
+                      様々な音声波形編集ソフトがある中で，本講義ではAudacity（オーダシティ）を扱います．<br>
+                      Audacityはフリーソフトで，WindowsやMacなどのプラットフォームで動作します．<br>
+                      無料ながらも，音声編集における一般的な機能は一通り実装されています．
+                    </div>
+                  </div>
+
+                  <div class="slide"><img src="slides/03-07.jpeg"></div>
+                  <div class="container">
+                    <div class="faceicon"><img src="icon.jpeg"></div>
+                    <div class="baloon">
+                      本講義１回の内容では，Audacityのすべてを紹介することはできません．<br>
+                      本講義ではあくまでも基本的な部分をダイジェスト的に紹介するだけです．<br>
+                      Audacityに興味を持ち，さらに詳しく学びたい，操作を覚えたいという人は，こちらの参考書籍で学んでみることをおすすめします．
+                    </div>
+                  </div>
+                <!--ここまで-->
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="anmt">
+          <section id="sec2"> <!-- sec2 -->
+            <div class="hidden_box">
+              <label for="label2">導入<span class="small">（クリックして表示）</small></label>
+              <input type="checkbox" id="label2"/>
+              <div class="hidden_show">
+                <!--非表示ここから-->
+                <div class="slide"><img src="slides/03-08.jpeg"></div>
+                <div class="mid"><a href="サンプル音声.zip">サンプル音声.zip（ダウンロード）</a></div>
+                <div class="container">
+                  <div class="faceicon"><img src="icon.jpeg"></div>
+                  <div class="baloon">
+                    では，早速Audacityの導入に入ります．<br>
+                    まずは音声ファイルの取り込みから始めます．<br>
+                    音声編集を行うので，音声データが必要になります．<br>
+                    今回は，この講義のために用意した音声サンプルを使用していただきます．<br>
+                    上記のリンクから，「サンプル音声.zip」をダウンロードしてください．<br>
+                    ZIPという拡張子は，ファイルをフォルダごと圧縮して一つにまとめた圧縮ファイルを表しています．<br>
+                    圧縮されているのでそのままでは使用できません．必ず解凍（展開）してください．<br><br>
+
+                    Windowsの場合，ZIPファイルを解凍しなくても，フォルダの中身が見えてしまいます．<br>
+                    そのため，圧縮されているファイルであるという認識がないまま使用してしまう人がいます．<br>
+                    一方で，Audacityなどのソフトウェアの方は，ZIPファイルの中の音声ファイルをそのままでは使用できません．<br>
+                    なので，ZIPファイルは必ず展開（解凍）してから使用するように心がけてください．
+                  </div>
+                </div>
+
+                <div class="slide"><img src="slides/03-09.jpeg"></div>
+                <div class="container">
+                  <div class="faceicon"><img src="icon.jpeg"></div>
+                  <div class="baloon">
+                    サンプル音声が用意出来たら，インストール済みのAudacityを開いてください．<br>
+                    まずは，Audacityで音声ファイルを取り込みます．<br>
+                    ダウンロードして解凍した「サンプル音声」フォルダの中の音声ファイルの一つ「sampole_voice.mp3」をAudacityの灰色の部分にドラッグ＆ドロップしましょう．<br>
+                    ドラッグ＆ドロップする以外にも「ファイル」⇒「開く」からファイルを選んで開くこともできます．<br><br>
+
+                    Audacityの画面に青い波形が表示されれば取り込み成功です．
+                  </div>
+                </div>
+
+                <div class="slide"><img src="slides/03-10.jpeg"></div>
+                <div class="container">
+                  <div class="faceicon"><img src="icon.jpeg"></div>
+                  <div class="baloon">
+                    音声ファイルの取り込みができたので，次は音声の再生をします．<br>
+                    音が鳴りますのでヘッドフォンを着けるなどしてください．<br>
+                    再生は，再生ボタンを押すか，キーボードの「spaceキー」を押してください．<br><br>
+
+                    「あらゆる現実を，すべて自分の方へ捻じ曲げたのだ」という音声が流れれば成功です．<br>
+                    音が鳴らなかった人は音量がゼロになっていないか，イヤフォンを使っている場合はきちんとデバイスが接続されているかなどを確認してください．<br>
+                    再生及び一時停止は「spaceキー」で操作できますが，この操作はメディア系のあらゆるソフトで使われるショートカットキーなので是非覚えておいてください．
+                    <i></i>
+                  </div>
+                </div>
+                <!--ここまで-->
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="anmt">
+          <section id="sec3"> <!-- sec3 -->
+            <div class="hidden_box">
+              <label for="label3">演習①：音声の切り貼り<span class="small">（クリックして表示）</small></label>
+              <input type="checkbox" id="label3"/>
+              <div class="hidden_show">
+                <!--非表示ここから-->
+                <div class="slide"><img src="slides/03-11.jpeg"></div>
+                <div class="container">
+                  <div class="faceicon"><img src="icon.jpeg"></div>
+                  <div class="baloon">
+                    それでは演習です．<br>
+                    「sample_voice.mp3」の音声の一部を切り貼りして，別の文章の音声を作ってみましょう．<br>
+                    波形接続型音声合成を手動で実現するようなイメージです．<br><br>
+
+                    Wordなどでの文章の切り貼りと同じように，波形を直接選択して直感的に切り貼りを行うことができます．<br>
+                    では，各自のPCでこちらの演習に取り組み，終わったら次に移りましょう．
+                  </div>
+                </div>
+                <!--ここまで-->
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="anmt">
+          <section id="ex1"> <!-- 練習問題 -->
+            <h2>練習問題１</h2>
+            <div class="doc">
+              次の章の学習に進むためには，練習問題に取り組み，正答する必要があります．<br>
+              わからない場合には，講義資料に戻って内容を理解するようにしてください．<br><br>
+
+              <div class="ex">
+                <u>問題：</u><br>
+                演習①の内容に取り組みましたか？
+              </div>
+            </div>
+            <p class="doc">
+              １．<a href="#sec1" class="qanda">取り組んでいない</a><br>
+              ２．<a href="#sec1" class="qanda">取り組みたいとは思った</a><br>
+              ３．<a href="#sec1" class="qanda">取り組みたくない</a><br>
+              ４．<a href="#sec1" class="qanda">No</a><br>
+              ５．<a href="#sec1" class="qanda">Never</a><br>
+              ６．<a href="#sec1" class="qanda">親にやってもらった</a><br>
+              ７．<a href="MCD1_AudioEdit2.html" class="qanda" id="correct">Yes</a><br>
+              ８．<a href="#sec1" class="qanda">講義資料を読んでいない</a><br>
+            </p>
+          </section>
+        </div>
+
+        <footer>
+          © Faculty of Global Media Studies, Komazawa Univesity 2023.
+        </footer>
+
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="MCD.js"></script>
+    </body>
+</html>

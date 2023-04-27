@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>マルチメディアコンテンツデザイン各論３：音声データの編集（2/4:音声の加工・保存）</title>
+        <link rel="stylesheet" href="MCD.css">
+        <!-- Webフォント用 -->
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400&family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+        <!-- favicon -->
+        <link rel="icon" type="image/png" href="favicon.png">
+    </head>
+    <body>
+      <span class="small"><div id="time">経過時間：0秒</div></span>
+
+        <header>
+          <h1>マルチメディアコンテンツデザイン各論３：音声データの編集（2/4:音声の加工・保存）</h1>
+          <p class="right">
+            講師：平井 辰典<br>
+            <progress value="0.25"></progress><br>
+            (25％ / 100％)
+          </p>
+        </header>
+
+        <section> <!-- 動画 -->
+          <p>
+            <a href="MCD1_AudioEdit1.html">[前の項目へ]</a>
+          </p>
+          <h2>②音声の加工・保存</h2>
+
+          <!-- <p class="doc">
+            上記の動画を試聴するか，以下の項目を一つずつ読んで内容を理解してください．<br>
+            最後に練習問題に取り組んで次の内容に進みましょう．<br>
+            <span class="small">※　動画の内容と以下の項目は同じ内容です．</span>
+          </p> -->
+          <p class="doc">
+            以下の項目を一つずつ読んで内容を理解してください．<br>
+            最後に練習問題に取り組んで次の内容に進みましょう．
+          </p>
+        </section>
+
+        <nav>
+          <h2>本項目の目次</h2>
+          <ul>
+            <li><a href="#sec1">演習②：音声の加工</a>
+            <li><a href="#sec2">演習③：音声ファイルの書き出し</a>
+          </ul>
+          <ul>
+            <li><a href="#ex2">練習問題２</a>
+          </ul>
+        </nav>
+
+        <div class="anmt">
+          <section id="sec1"> <!-- sec1 -->
+            <div class="hidden_box">
+              <label for="label1">演習②：音声の加工<span class="small">（クリックして表示）</small></label>
+              <input type="checkbox" id="label1"/>
+              <div class="hidden_show">
+                <!--非表示ここから-->
+                <div class="slide"><img src="slides/03-12.jpeg"></div>
+                <div class="container">
+                  <div class="faceicon"><img src="icon.jpeg"></div>
+                  <div class="baloon">
+                    続いての演習です．<br>
+                    本日は演習メインなので，資料を読むだけではなく，実際に手を動かして体験することを意識してください．<br>
+                    演習②は音声の加工（エフェクトの付加）です．<br>
+                    エフェクトという項目があるので，そこにある色々なエフェクトがありますので，試してみましょう．<br>
+                    エフェクトのパラメータを指定しなければいけないものが多いですが，数値なども色々と変化させながらどんな違いが生じるのかを観察するといいです．
+                  </div>
+                </div>
+                <p class="doc">
+                  ↑の吹き出しをクリックすると，音声が読み上げられます．（環境依存あり）
+                </p>
+
+                <div class="slide"><img src="slides/03-13.jpeg"></div>
+                <div class="container">
+                  <div class="faceicon"><img src="icon.jpeg"></div>
+                  <div class="baloon">
+                    演習②に付随して，よく使う音声エフェクトの解説を載せておきます．<br>
+                    他にもたくさんあって，全部紹介することはできませんが，最低限ここに載せているような項目については理解しておくと音声編集がしやすくなるかと思います．<br>
+                    他にもノイズの除去やフィルタ処理などもよく使いますので是非試してみてください．
+                  </div>
+                </div>
+                <!--ここまで-->
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="anmt">
+          <section id="sec2"> <!-- sec2 -->
+            <div class="hidden_box">
+              <label for="label2">演習③：音声ファイルの書き出し<span class="small">（クリックして表示）</small></label>
+              <input type="checkbox" id="label2"/>
+              <div class="hidden_show">
+                <!--非表示ここから-->
+                <div class="slide"><img src="slides/03-14.jpeg"></div>
+                <div class="container">
+                  <div class="faceicon"><img src="icon.jpeg"></div>
+                  <div class="baloon">
+                    ここまでの作業内容を保存してみましょう．<br>
+                    PC作業全般で共通することですが，保存をしないと編集作業が再開できません．<br>
+                    特に，メディア関連のソフトウェアは，PCに大きな負荷をかけるものが多いため，作業中にPCがフリーズするというケースが非常に多いです．<br>
+                    そのため，「キリがいいところまで作業をしたら保存」するのではなく，「気づいたら常に保存」，「何か作業をしたらすぐに保存」というのを心がけてください．<br><br>
+
+                    さらに，メディア編集系のソフトにおける保存の際の重要な要素として，ファイルの保存には二通りあるということを覚えてください．<br>
+                    Audacityの場合は，音声ファイルの保存（書き出し）とプロジェクトファイルの保存の二通りです．
+                  </div>
+                </div>
+
+
+                <div class="slide"><img src="slides/03-15.jpeg"></div>
+                <div class="container">
+                  <div class="faceicon"><img src="icon.jpeg"></div>
+                  <div class="baloon">
+                    では，演習③として，実際に音声ファイルの保存をしていただきます．<br>
+                    ここで行っていただくのは<span class="important">書き出し</span>の方です．<br>
+                    音声ファイルの書き出しをしておくと，Audacityを持っていなくても編集後の音声が再生できます．<br>
+                    ここでは，非圧縮の音声ファイル形式である「wav」形式のファイルとして書き出しましょう．<br>
+                    wavは「ワブ」や「ウェーブ」などと読みます．
+                  </div>
+                </div>
+
+                <div class="slide"><img src="slides/03-16.jpeg"></div>
+                <div class="container">
+                  <div class="faceicon"><img src="icon.jpeg"></div>
+                  <div class="baloon">
+                    Audacityでは，複数の音声ファイルを同時に編集することができます．<br>
+                    複数のトラックを同時に編集したような音声データは，書き出してしまうと一つの音声ファイルとなってしまいます．<br>
+                    そのため，書き出した後に編集をやり直したいと思ったら，また最初から編集をしなければいけません．<br>
+                    そこで，編集途中の情報を記録するのがプロジェクトファイルです．<br>
+                    プロジェクトファイルは，Audacityの編集途中の情報をそのまま保存するものなので，複数のトラックの情報がそのまま保持された状態で作業が再開できます．<br>
+                    Audacityのプロジェクトファイルの拡張子は.aup3です．<br>
+                    Ctrl + s（Win） / Cmd + s（Mac）で保存した際に保存されるのがこのプロジェクトファイルです．
+                  </div>
+                </div>
+
+                <div class="slide"><img src="slides/03-17.jpeg"></div>
+                <div class="container">
+                  <div class="faceicon"><img src="icon.jpeg"></div>
+                  <div class="baloon">
+                    プロジェクトファイルと音声ファイルの違いについてです．<br>
+                    この内容は非常に重要で，コンピュータでソフトを使ってコンテンツを制作する際には必ず知っておかなければいけない知識です．<br>
+                    ここではAudacityの話に特化した説明をしていますが，この先扱う「Studio One Prime」というソフトでもこの知識を持っておく必要があります．<br>
+                    他にも，動画編集ソフトや画像制作ソフトなどでもこのプロジェクトファイルとメディアそのもののファイルの違いを理解しておく必要があります．<br><br>
+
+                    ここに書いてあることを簡単な例に例えると，<span class="important">「プロジェクトファイル」はWordのように編集できるファイル</span>で，<span class="important">「音声ファイル」はPDFのように，Wordのソフトがインストールされていない端末でも閲覧できるような，コンテンツをパッケージングしたファイル</span>と言えます．<br>
+                    この違いをしっかり理解しておきましょう．<br><br>
+
+                    ここは非常に重要なところです．<br><br>
+
+                    毎年レポート提出の際にプロジェクトファイルを提出する人がいます．<br>
+                    当然，編集情報なので，編集時の元のデータを持っていないと再現ができません．つまり，再生ができないということです．<br>
+                    そのようなファイルを提出した場合にはきちんと採点することができませんので，お気を付けください．
+                  </div>
+                </div>
+                <!--ここまで-->
+              </div>
+            </div>
+          </section>
+        </div>
+
+
+        <div class="anmt">
+            <section id="ex2"> <!-- 練習問題 -->
+            <h2>練習問題２</h2>
+            <div class="doc">
+              次の章の学習に進むためには，練習問題に取り組み，正答する必要があります．<br>
+              わからない場合には，講義資料に戻って内容を理解するようにしてください．<br><br>
+
+              <div class="ex">
+                <u>問題：</u><br>
+                Audacityで音声波形データを保存をする際に，「ファイルの書き出し」によって保存することで作成されるファイルはどのようなファイルか？また，演習②と演習③には取り組みましたか？
+              </div>
+            </div>
+            <p class="doc">
+              １．<a href="#sec1" class="qanda">Audacityがないと開くことができない音声ファイル．演習②，③には取り組んでいない．</a><br>
+              ２．<a href="#sec1" class="qanda">Audacityがないと開くことができないプロジェクトファイル．演習②，③には取り組んでいない．</a><br>
+              ３．<a href="#sec1" class="qanda">Audacityがなくても開くことができるプロジェクトファイル．演習②，③には取り組んでいない．</a><br>
+              ４．<a href="#sec1" class="qanda">Audacityがなくても開くことができる音声ファイル．演習②，③には取り組んでいない．</a><br>
+              ５．<a href="#sec1" class="qanda">Audacityがないと開くことができない音声ファイル．演習②，③に取り組んだ．</a><br>
+              ６．<a href="#sec1" class="qanda">Audacityがないと開くことができないプロジェクトファイル．演習②，③に取り組んだ．</a><br>
+              ７．<a href="#sec1" class="qanda">Audacityがなくても開くことができるプロジェクトファイル．演習②，③に取り組んだ．</a><br>
+              ８．<a href="MCD1_AudioEdit3.html" class="qanda" id="correct">Audacityがなくても開くことができる音声ファイル．演習②，③に取り組んだ．</a>
+            </p>
+          </section>
+        </div>
+
+        <footer>
+          © Faculty of Global Media Studies, Komazawa Univesity 2023.
+        </footer>
+
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="MCD.js"></script>
+    </body>
+</html>

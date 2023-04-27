@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>マルチメディアコンテンツデザイン各論３：音声データの編集（3/4:音声の分析）</title>
+        <link rel="stylesheet" href="MCD.css">
+        <!-- Webフォント用 -->
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400&family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+        <!-- favicon -->
+        <link rel="icon" type="image/png" href="favicon.png">
+    </head>
+    <body>
+      <span class="small"><div id="time">経過時間：0秒</div></span>
+
+        <header>
+          <h1>マルチメディアコンテンツデザイン各論３：音声データの編集（3/4:音声の分析）</h1>
+          <p class="right">
+            講師：平井 辰典<br>
+            <progress value="0.5"></progress><br>
+            (50％ / 100％)
+          </p>
+        </header>
+
+        <section> <!-- 動画 -->
+          <p>
+            <a href="MCD1_AudioEdit2.html">[前の項目へ]</a>
+          </p>
+          <h2>③音声の分析</h2>
+
+          <p class="doc">
+            以下の項目を一つずつ読んで内容を理解してください．<br>
+            最後に練習問題に取り組んで次の内容に進みましょう．
+          </p>
+        </section>
+
+        <nav>
+          <h2>本項目の目次</h2>
+          <ul>
+            <li><a href="#sec1">演習④：音声の分析① 波形の観察</a>
+            <li><a href="#sec2">演習⑤：音声の分析② スペクトログラム</a>
+            <li><a href="#sec3">純音とは？</a>
+            <li><a href="#sec4">演習⑥：音声の生成</a>
+          </ul>
+          <ul>
+            <li><a href="#ex3">練習問題３</a>
+          </ul>
+        </nav>
+
+        <div class="anmt">
+          <section id="sec1"> <!-- sec1 -->
+            <div class="hidden_box">
+              <label for="label1">演習④：音声の分析① 波形の観察<span class="small">（クリックして表示）</small></label>
+              <input type="checkbox" id="label1"/>
+              <div class="hidden_show">
+                <!--非表示ここから-->
+                <div class="slide"><img src="slides/03-18.jpeg"></div>
+                <div class="container">
+                  <div class="faceicon"><img src="icon.jpeg"></div>
+                  <div class="baloon">
+                    今日はどんどん演習をやっていきます．<br>
+                    次は演習④です．音声の分析をしてみましょう．<br>
+                    一つ目の分析は音声波形の観察です．<br><br>
+
+                    前回，音声は波で，それを標本化と量子化によってデジタル化しているという話をしました．<br>
+                    では，音声ファイルを開いて表示された波形は，本当に波なのか？<br>
+                    それを確認してみましょう．<br>
+                    上記の手順通りに「A4.mp3」の波形をズームして，音声の波形を観察してみましょう．<br>
+                    この音声データはサンプリング周波数44.1kHzで，１秒間に44,100のデータが存在するものです．<br>
+                    なので，一つ一つのデータを観察するには，かなりズームしなければいけません．
+                  </div>
+                </div>
+                <p class="doc">
+                  ↑の吹き出しをクリックすると，音声が読み上げられます．（環境依存あり）
+                </p>
+                <!--ここまで-->
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="anmt">
+          <section id="sec2"> <!-- sec2 -->
+            <div class="hidden_box">
+              <label for="label2">演習⑤：音声の分析② スペクトログラム<span class="small">（クリックして表示）</small></label>
+              <input type="checkbox" id="label2"/>
+              <div class="hidden_show">
+                <!--非表示ここから-->
+                <div class="slide"><img src="slides/03-19.jpeg"></div>
+                <div class="container">
+                  <div class="faceicon"><img src="icon.jpeg"></div>
+                  <div class="baloon">
+                    続いて，演習⑤では，音声のスペクトログラムを観察してみましょう．<br>
+                    スペクトログラムは，音声の周波数の分布がどのように時間変化しているかを示す音声データの表現方式です．<br><br>
+
+                    「A4.mp3」のスペクトログラムと，「sample_voice.mp3」のスペクトログラムを比較してみましょう．
+                  </div>
+                </div>
+
+                <div class="slide"><img src="slides/03-20.jpeg"></div>
+                <div class="container">
+                  <div class="faceicon"><img src="icon.jpeg"></div>
+                  <div class="baloon">
+                    比較してみるとこのように違いが見られたかと思います．<br>
+                    左の「A4.mp3」は，いわゆる純音と呼ばれる音声です．<br>
+                    A4はラの音で，周波数は440Hzです．<br>
+                    少し見えづらいのですが，440Hzの箇所にだけ色がついていることがわかるかと思います．<br><br>
+
+                    一方で，右側の人の声のスペクトログラムの場合，下部の低い音から，上部の高い音まで，比較的広い範囲で色がついているのが観察できるかと思います．<br>
+                    色が白いほど，その部分の成分が強く，青いほどその成分が弱いという状態です．<br>
+                    スペクトログラムを観察しながら音声を観察すると，どの部分がどのセリフに該当するのかが見て取れます．<br><br>
+
+                    このような人の声のスペクトログラムは，声紋などと呼ばれることもあり，発話者の声と喋っている言葉によって違ったデータを示します．<br>
+                    これを使うことで，音声認識や話者認識ができ，SiriやAlexa，Pepperなどの技術の裏にはこのスペクトログラムによるデータ表現があります．
+                  </div>
+                </div>
+                <!--ここまで-->
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="anmt">
+          <section id="sec3"> <!-- sec3 -->
+            <div class="hidden_box">
+              <label for="label3">純音とは？<span class="small">（クリックして表示）</small></label>
+              <input type="checkbox" id="label3"/>
+              <div class="hidden_show">
+                <!--非表示ここから-->
+                <div class="slide"><img src="slides/03-21.jpeg"></div>
+                <div class="container">
+                  <div class="faceicon"><img src="icon.jpeg"></div>
+                  <div class="baloon">
+                    「A4.mp3」のような，音声のことを純音と呼びます．<br>
+                    純音とは，サイン波や正弦波とも呼ばれるもので，数学の三角関数「sin（サイン）」を使って表現することができます．<br>
+                    音響学と数学との間には密接な繋がりがあり，特に，三角関数「sin」と「cos」は音を理解する上で非常に重要な概念です．<br>
+                    数学が苦手でサインやコサインなどの概念を理解することができなかった人でも，音という側面からこれらを理解するとより理解しやすいかもしれません．<br><br>
+
+                    純音は，一つのsinによって表現されるシンプルな波による音です．<br>
+                    一つの周波数の値しか含んでいないので，スペクトログラムを見ても，一つの周波数にしかデータを持っていないわけです．<br>
+                    一つの周波数の音なので，楽器のチューニングをする際などに使われたりします．
+                  </div>
+                </div>
+
+                <div class="slide"><img src="slides/03-22.jpeg"></div>
+                <div class="container">
+                  <div class="faceicon"><img src="icon.jpeg"></div>
+                  <div class="baloon">
+                    純音を使って，音が割れるという現象について理解しましょう．<br>
+                    純音は，一つの周波数の音しか含まず，混じりっ気のない滑らか音です．<br><br>
+
+                    一方で，録画録音時にマイクに向かって大きな声を出したときに観測される「音が割れる」という現象では，割れるという言葉の通り，音がバリバリと割れたかのようになります．<br><br>
+
+                    純音「A4.mp3」の音をあえて割ってみましょう．<br>
+                    上記の手順で音声波形を増幅することで音が割れます．<br>
+                    音が割れると，きれいな純音がどのような音になるかを聴いてみてください．<br>
+                    また，音が割れたときの波形を観察してみましょう．<br><br>
+
+                    割れた波形を観察してみると，上限値1.0と下限値-1.0を超えてしまっていることがわかります．<br>
+                    波形のこのような部分のことをクリッピングした部分と呼びます．<br>
+                    この部分のデータは，すべて1.0もしくは-1.0に固定されてしまいます．<br>
+                    純音は，滑らかな曲線によって作られる波ですが，このようなクリッピング箇所があると，直線的な波が混ざってしまいます．<br>
+                    次の演習で，音が割れた箇所と直線的な波である「矩形波/方形波」を比べてみます．
+                  </div>
+                </div>
+                <!--ここまで-->
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="anmt">
+          <section id="sec4"> <!-- sec4 -->
+            <div class="hidden_box">
+              <label for="label4">演習⑥：音声の生成<br><span class="small">（クリックして表示）</small></label>
+              <input type="checkbox" id="label4"/>
+              <div class="hidden_show">
+                <!--非表示ここから-->
+                <div class="slide"><img src="slides/03-23.jpeg"></div>
+                <div class="container">
+                  <div class="faceicon"><img src="icon.jpeg"></div>
+                  <div class="baloon">
+                    続いての演習では，音声を生成してみましょう．<br>
+                    Audacityは既存の音声ファイルを加工・編集するためのソフトで，音楽を制作するためのソフトではないため，新しい音を作るという面では，それほど充実した機能はないのですが，だからこそ，シンプルな音声波形を観察したい場合に適しています．<br><br>
+
+                    上記の手順で，ジェネレーターを使って色々な音を生成してみましょう．<br>
+                    二つの問の内容についても各自で確認してみてください．<br>
+                    目には見えない音を可視化することで，普段は気づくことができないことに気づくことができれば，音の感じ方が変わるかもしれません．
+                  </div>
+                </div>
+                <!--ここまで-->
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="anmt">
+          <section id="ex3"> <!-- 練習問題 -->
+            <h2>練習問題３</h2>
+            <div class="doc">
+              次の章の学習に進むためには，練習問題に取り組み，正答する必要があります．<br>
+              わからない場合には，講義資料に戻って内容を理解するようにしてください．<br><br>
+
+              <div class="ex">
+                <u>問題：</u><br>
+                純音の音声を増幅させ，わざと音割れさせた場合，以下のどの波形に近い形となるか？また，演習④～⑥には取り組んだか？
+              </div>
+            </div>
+            <p class="doc">
+              １．<a href="#sec1" class="qanda">ホワイトノイズ．No．</a><br>
+              ２．<a href="#sec1" class="qanda">サイン波．No．</a><br>
+              ３．<a href="#sec1" class="qanda">正弦波．No．</a><br>
+              ４．<a href="#sec1" class="qanda">三角波．No.</a><br>
+              ５．<a href="#sec1" class="qanda">矩形波．No.</a><br>
+              ６．<a href="#sec1" class="qanda">ホワイトノイズ．Yes．</a><br>
+              ７．<a href="#sec1" class="qanda">サイン波．Yes．</a><br>
+              ８．<a href="#sec1" class="qanda">正弦波．Yes．</a><br>
+              ９．<a href="#sec1" class="qanda">三角波．Yes.</a><br>
+              １０．<a href="MCD1_AudioEdit-ex.html" class="qanda" id="correct">矩形波．Yes!!!!</a>
+            </p>
+          </section>
+        </div>
+
+        <footer>
+          © Faculty of Global Media Studies, Komazawa Univesity 2023.
+        </footer>
+
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="MCD.js"></script>
+    </body>
+</html>
